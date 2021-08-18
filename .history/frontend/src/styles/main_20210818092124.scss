@@ -1,0 +1,24 @@
+main{
+ display : flex;
+ flex-direction: column;
+ gap : 24px;
+
+  >div{
+   display : flex;
+   flex-direction: column;
+   gap : 15px;
+  }
+
+ hr{
+  background: #C4C4C4;
+  height: 1px;
+  max-width: 616px;
+ }
+  
+}
+
+.mainopcao{
+ display : flex;
+ flex-direction: column;
+ gap : 15px;
+}
