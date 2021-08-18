@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Home from './page/Home';
 import { Route, Switch  } from 'react-router-dom'
 import Resultado from './page/Resultado';
-import Gabarito from './page/Gabarito';
 
 
 const Rotas = () => {
@@ -16,11 +15,8 @@ console.log(respGeo)
        <Route exact  path = '/'>
            <Home setMat = {setRespMat} setHis = {setRespHis}  setGeo = {setRespGeo} />
       </Route>
-      <Route  path = '/resultado'>
+      <Route  path = '/Resultado'>
           <Resultado />
-      </Route>
-      <Route  path = '/gabarito'>
-          <Gabarito />
       </Route>
   </Switch>
   

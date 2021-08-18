@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Home from './page/Home';
 import { Route, Switch  } from 'react-router-dom'
 import Resultado from './page/Resultado';
-import Gabarito from './page/Gabarito';
 
 
 const Rotas = () => {
@@ -18,9 +17,6 @@ console.log(respGeo)
       </Route>
       <Route  path = '/resultado'>
           <Resultado />
-      </Route>
-      <Route  path = '/gabarito'>
-          <Gabarito />
       </Route>
   </Switch>
   

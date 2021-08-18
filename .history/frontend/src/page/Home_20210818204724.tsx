@@ -26,10 +26,8 @@ const inicialResposta= {
    const [respostaGeografia , setRespostaGeografia] =  useState<respostaType>(inicialResposta)
    const {perguntasMatematica, perguntasHistoria, perguntasGeografia}  = useContext(ContextPerguntas)
    const [erro, setErro] = useState<string>('')
-   let history = useHistory()
 
    function estado(){
-      
       
       if(respostaGeografia.p1 === '' || respostaGeografia.p2 === '' || respostaGeografia.p3 === '' || respostaGeografia.p4 === '' ||
       respostaHistoria.p1 === '' || respostaHistoria.p2 === '' || respostaHistoria.p3 === '' || respostaHistoria.p4 === '' ||
@@ -41,7 +39,6 @@ const inicialResposta= {
          props.setMat(respostaMatematica)
          props.setHis(respostaHistoria)
          props.setGeo(respostaGeografia)
-         history.push('/resultado')
 
       }
          
