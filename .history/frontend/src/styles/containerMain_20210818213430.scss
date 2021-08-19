@@ -1,0 +1,36 @@
+section{
+ display : flex;
+ flex-direction: column;
+ gap : 24px;
+
+  >div{
+   display : flex;
+   flex-direction: column;
+   gap : 15px;
+   h4{
+    margin-bottom: 15px;
+   }
+  }
+
+ hr{
+  background: #C4C4C4;
+  height: 1px;
+  max-width: 616px;
+  margin-top: 22px;
+ }
+ h2{
+  margin-top:51px
+ }
+  
+}
+
+.mainOpcao{
+ display : flex;
+ flex-direction: column;
+ gap : 22px;
+ input{
+  margin-right: 50px;
+ }
+}
+
+

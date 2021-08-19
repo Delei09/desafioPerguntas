@@ -1,0 +1,38 @@
+*{
+ margin:0;
+ padding:0;
+ box-sizing: border-box;
+ text-decoration: none;
+}
+body{
+ font-family: 'Ubuntu', sans-serif;
+ background: #F0F0F0;
+
+}
+.App{
+ padding-left: 60px ;
+ padding-top: 40px;
+ background: #FFFFFF;
+ max-width: 860px; 
+ height: 100%;
+ min-height: 500px;
+ border-radius: 12px;
+ margin:60px auto;
+}
+input[type="radio"] + label::before {
+ content: "";
+ position: absolute;
+ width: 20px;
+ height: 20px;
+ border: solid 2px;
+ vertical-align: bottom;
+}
+input[type="radio"]:checked + label::after {
+ content: "";
+ position: absolute;
+ width: 10px;
+ height: 20px;
+ border-right: solid 3px green;
+ border-bottom: solid 3px green;
+ transform: rotate(45deg);
+}

@@ -1,0 +1,31 @@
+*{
+ margin:0;
+ padding:0;
+ box-sizing: border-box;
+ text-decoration: none;
+}
+body{
+ font-family: 'Ubuntu', sans-serif;
+ background: #F0F0F0;
+
+}
+.App{
+ padding-left: 60px ;
+ padding-top: 40px;
+ background: #FFFFFF;
+ max-width: 860px; 
+ height: 100%;
+ min-height: 500px;
+ border-radius: 12px;
+ margin:60px auto;
+}
+
+.exemplo2 input[type=radio], 
+.exemplo2 input[type=checkbox]{    display:none; /* Esconde os inputs */}
+.exemplo2 label {    cursor: pointer;}
+.exemplo2 input[type="radio"] + label:before, 
+.exemplo2 input[type="checkbox"] + label:before {    border: 1px solid #5D5C5C;    content: "\00a0";    display: inline-block;    font: 16px/1em sans-serif;    height: 16px;    margin: 0 .25em 0 0;    padding:0;    vertical-align: top;    width: 16px;    border-radius:4px;}
+.exemplo2 input[type="radio"]:checked + label:before, 
+.exemplo2 input[type="checkbox"]:checked + label:before {    background: #A0A0A0;    color: #FFF;    content: "\2713";    text-align: center;}.
+.exemplo2 input[type=radio"]:checked + label:after, .
+.exemplo2 input[type="checkbox"]:checked + label:after {    font-weight: bold;}

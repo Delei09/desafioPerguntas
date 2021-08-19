@@ -1,0 +1,44 @@
+*{
+ margin:0;
+ padding:0;
+ box-sizing: border-box;
+ text-decoration: none;
+}
+body{
+ font-family: 'Ubuntu', sans-serif;
+ background: #F0F0F0;
+
+}
+.App{
+ padding-left: 60px ;
+ padding-top: 40px;
+ background: #FFFFFF;
+ max-width: 860px; 
+ height: 100%;
+ min-height: 500px;
+ border-radius: 12px;
+ margin:60px auto;
+}
+
+
+input[type = 'radio']:before{
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 20px;
+ height: 20px;
+ border: 2px solid #000;
+ border-radius: 7px;
+ background: #fff;
+}
+
+input[type = 'radio']:checked::after{
+ content: '\2713';
+ color: #7329a7;
+ font-size: 34px;
+ font-weight: bold;
+ position: absolute;
+ top: -17px;
+ left: 2px;
+}
