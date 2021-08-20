@@ -124,7 +124,8 @@ function App() {
 
 useEffect( () => {
     axios.get('http://localhost:3005/perguntas')
-      .then(resp => console.log(resp))
+      .then(resp => resp.data)
+      .then(dados => console.log(dados))
 }, [] )
   return (
     <div className="App">
