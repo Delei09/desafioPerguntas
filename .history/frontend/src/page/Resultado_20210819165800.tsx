@@ -19,18 +19,18 @@ const { respGeo, respHis, respMat} = useContext(ContextResposta)
 const { perguntasGeografia, perguntasHistoria,perguntasMatematica } = useContext(ContextPerguntas)
 
 const respGraficoMat = {
-
-    'background': '#9EBAEF' ,
+    width: '600%',
+    'background-color': '#9EBAEF' ,
     height: `${resultadoMatematica.length * 77}px`
 }
 const respGraficoHis = {
-    
-    'background': '#9EBAEF' ,
+    width: '600%',
+    'background-color': '#9EBAEF' ,
     height: `${resultadoHistoria.length * 77}px`
 }
 const respGraficoGeo = {
-    
-    'background': '#9EBAEF' ,
+    width: '600%',
+    'background-color': '#9EBAEF' ,
     height: `${resultadoGeografia.length * 77}px`
 }
 
@@ -88,21 +88,21 @@ const nota = ( (resultadoGeografia.length + resultadoHistoria.length + resultado
  return(
   <div className = 'divResultado'>
      <Header titulo = 'Teste de Conhecimentos' />
-     <h2 className = 'h2Resultado'>    {nota >= 70 ?   'Parabéns! Você tirou ' : 'Infelizmente Você tirou '}  <span className = {nota >= 70 ? 'notaVerde' : 'notaVermelho'}>{Math.round(nota)}   </span>    </h2>
+     <h2 className = 'h2Resultado'> {nota > 70 ?   `Parabens! Você tirou ${ Math.round(nota)} ` : `Infelizmente Você tirou ${Math.round(nota)}`} </h2>
      <ContainerMain titulo = 'O teste vale 100 pontos, e a nota necessária é 70'>
           <div className= 'divResultadoGrafico'>
 
               <div>
                     <div className = 'divCont'> <div className = 'graficoMat'></div>  4 </div>
-                    <div className = 'divCont'>  <div className= 'graficoMat' style = {respGraficoMat}  ></div>  {resultadoMatematica.length} </div>
+                    <div className = 'divCont'>  <div style = {respGraficoMat}  ></div>  {resultadoMatematica.length} </div>
               </div>
              <div>
                   <div className = 'divCont'>  <div className = 'graficoHis'></div>  4 </div>
-                 <div className = 'divCont'>  <div className= 'graficoMat'  style = {respGraficoHis}  ></div>  {resultadoHistoria.length} </div>
+                 <div className = 'divCont'>  <div style = {respGraficoHis}  ></div>  {resultadoHistoria.length} </div>
              </div>
             <div>
                 <div className = 'divCont'>  <div className = 'graficoGeo'></div>  4 </div>
-                <div className = 'divCont'> <div style = {respGraficoGeo} className= 'graficoMat'   ></div>  {resultadoGeografia.length} </div>
+                <div className = 'divCont'> <div style = {respGraficoGeo}  ></div>  {resultadoGeografia.length} </div>
             </div>
           </div>
           <div className = 'divTexto'>

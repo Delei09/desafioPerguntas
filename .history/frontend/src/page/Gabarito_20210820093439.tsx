@@ -41,7 +41,7 @@ const Gabarito = (props : any) => {
          {questao.options.map( (option, i) => {
             return(
                <div className = 'divInputLabel' key = {option } >
-               <input  type="radio" id = {questao.id+option} disabled = {true}  defaultChecked = {    (option === questao.resposta) || (option === respMat.p1) || (option === respMat.p2) || (respMat.p3 === option) || (respMat.p4 === option)    } 
+               <input  type="radio" id = {questao.id+option} defaultChecked = {    (option === questao.resposta) || (option === respMat.p1) || (option === respMat.p2) || (respMat.p3 === option) || (respMat.p4 === option)    } 
              name={``} value= {option} />   
                <label className = {option === questao.resposta ? 'label' : 'labelErrado'}  htmlFor= {questao.id+option}>  {option}  </label>
               
@@ -64,7 +64,7 @@ const Gabarito = (props : any) => {
          {questao.options.map( (option, i) => {
             return(
                <div className = 'divInputLabel' key = {option } >
-               <input  type="radio" id = {questao.id+option} disabled = {true}   defaultChecked = {    (option === questao.resposta) || (option === respHis.p1) || (option === respHis.p2) || (respHis.p3 === option) || (respHis.p4 === option)    } 
+               <input  type="radio" id = {questao.id+option} defaultChecked = {    (option === questao.resposta) || (option === respHis.p1) || (option === respHis.p2) || (respHis.p3 === option) || (respHis.p4 === option)    } 
              name={``} value= {option} />    
                <label className = {option === questao.resposta ? 'label' : 'labelErrado'}  htmlFor= {questao.id+option}>  {option}  </label>
               
@@ -87,7 +87,7 @@ const Gabarito = (props : any) => {
          {questao.options.map( (option, i) => {
             return(
                <div className = 'divInputLabel' key = {option }  >
-               <input  type="radio" id = {questao.id+option} disabled = {true}   defaultChecked = {    (option === questao.resposta) || (option === respGeo.p1) || (option === respGeo.p2) || (respGeo.p3 === option) || (respGeo.p4 === option)    } 
+               <input  type="radio" id = {questao.id+option} defaultChecked = {    (option === questao.resposta) || (option === respGeo.p1) || (option === respGeo.p2) || (respGeo.p3 === option) || (respGeo.p4 === option)    } 
              name={``} value= {option} />   
                <label className = {option === questao.resposta ? 'label' : 'labelErrado'}  htmlFor= {questao.id+option}>  {option}  </label>
               

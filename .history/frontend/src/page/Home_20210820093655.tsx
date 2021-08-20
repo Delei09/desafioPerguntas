@@ -90,7 +90,7 @@ const inicialResposta= {
                <input  type="radio" id = {questao.id+option} onChange = {(e: React.ChangeEvent<HTMLInputElement>)=> {
                 setRespostaHistoria({...respostaHistoria , [questao.id] : option  } )               } }
              name={`his${questao.id}`} value= {option} />   
-                <label className = 'label'  htmlFor= {questao.id+option}>  {option}  </label>
+               <label key = {i}  htmlFor= {questao.id+option}>  {option}  </label>
               
                </div>
             )
@@ -114,7 +114,7 @@ const inicialResposta= {
                <input  type="radio" id = {questao.id+option} onChange = {(e: React.ChangeEvent<HTMLInputElement>)=> {
                 setRespostaGeografia({...respostaGeografia , [questao.id] : option  } )               } }
              name={`geo${questao.id}`} value= {option} />   
-              <label className = 'label'  htmlFor= {questao.id+option}>  {option}  </label>
+               <label key = {i}  htmlFor= {questao.id+option}>  {option}  </label>
               
                </div>
             )

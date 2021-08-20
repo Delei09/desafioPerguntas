@@ -59,7 +59,7 @@ input[type=radio]:checked + .label:before {
  line-height: 18px;
 }
 
-input[type=radio]:checked + .labelErrado:before {
+.radioErrado:checked + .labelErrado:before {
  content: "";
  background-image: url(../img/backgroundRadioErrado.png);
  background-size: 18px;

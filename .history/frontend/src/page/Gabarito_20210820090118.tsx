@@ -21,9 +21,9 @@ const Gabarito = (props : any) => {
 
 
    useEffect( () => {
-
-      const label = document.querySelectorAll('.label')
-      console.log(label)
+         
+      console.log(labelErrado.current)
+     console.log(respGeo)
  }, [])
 
 
@@ -41,9 +41,9 @@ const Gabarito = (props : any) => {
          {questao.options.map( (option, i) => {
             return(
                <div className = 'divInputLabel' key = {option } >
-               <input  type="radio" id = {questao.id+option} disabled = {true}  defaultChecked = {    (option === questao.resposta) || (option === respMat.p1) || (option === respMat.p2) || (respMat.p3 === option) || (respMat.p4 === option)    } 
-             name={``} value= {option} />   
-               <label className = {option === questao.resposta ? 'label' : 'labelErrado'}  htmlFor= {questao.id+option}>  {option}  </label>
+               <input  type="radio" id = {questao.id+option} defaultChecked = {option === questao.resposta}
+             name={`mat${questao.id}`} value= {option} />   
+               <label ref = {labelErrado}  key = {i}  htmlFor= {questao.id+option}>  {option}  </label>
               
                </div>
             )
@@ -64,9 +64,9 @@ const Gabarito = (props : any) => {
          {questao.options.map( (option, i) => {
             return(
                <div className = 'divInputLabel' key = {option } >
-               <input  type="radio" id = {questao.id+option} disabled = {true}   defaultChecked = {    (option === questao.resposta) || (option === respHis.p1) || (option === respHis.p2) || (respHis.p3 === option) || (respHis.p4 === option)    } 
-             name={``} value= {option} />    
-               <label className = {option === questao.resposta ? 'label' : 'labelErrado'}  htmlFor= {questao.id+option}>  {option}  </label>
+               <input  type="radio" id = {questao.id+option}  defaultChecked = {option === questao.resposta}
+             name={`his${questao.id}`} value= {option} />   
+               <label key = {i}  htmlFor= {questao.id+option}  >  {option}  </label>
               
                </div>
             )
@@ -87,9 +87,9 @@ const Gabarito = (props : any) => {
          {questao.options.map( (option, i) => {
             return(
                <div className = 'divInputLabel' key = {option }  >
-               <input  type="radio" id = {questao.id+option} disabled = {true}   defaultChecked = {    (option === questao.resposta) || (option === respGeo.p1) || (option === respGeo.p2) || (respGeo.p3 === option) || (respGeo.p4 === option)    } 
-             name={``} value= {option} />   
-               <label className = {option === questao.resposta ? 'label' : 'labelErrado'}  htmlFor= {questao.id+option}>  {option}  </label>
+               <input  type="radio" id = {questao.id+option} defaultChecked = {option === questao.resposta}
+             name={`geo${questao.id}`} value= {option} />   
+               <label key = {i}  htmlFor= {questao.id+option}>  {option}  </label>
               
                </div>            )
          })}
@@ -99,8 +99,8 @@ const Gabarito = (props : any) => {
       )   
       })}
       <div className = 'divVetor'>
-      
-        <Link to = '/resultado' >  <img src = {vetor} alt = 'Voltar' />  Voltar</Link>
+        <img src = {vetor} alt = 'Voltar' />
+        <Link to = '/resultado' >Voltar</Link>
       </div>
    </ContainerMain>
   

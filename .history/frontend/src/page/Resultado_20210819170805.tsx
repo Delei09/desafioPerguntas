@@ -88,7 +88,7 @@ const nota = ( (resultadoGeografia.length + resultadoHistoria.length + resultado
  return(
   <div className = 'divResultado'>
      <Header titulo = 'Teste de Conhecimentos' />
-     <h2 className = 'h2Resultado'>    {nota >= 70 ?   'Parabéns! Você tirou ' : 'Infelizmente Você tirou '}  <span className = {nota >= 70 ? 'notaVerde' : 'notaVermelho'}>{Math.round(nota)}   </span>    </h2>
+     <h2 className = 'h2Resultado'> {nota > 70 ?   `Parabens! Você tirou ${ Math.round(nota)} ` : `Infelizmente Você tirou ${Math.round(nota)}`} </h2>
      <ContainerMain titulo = 'O teste vale 100 pontos, e a nota necessária é 70'>
           <div className= 'divResultadoGrafico'>
 

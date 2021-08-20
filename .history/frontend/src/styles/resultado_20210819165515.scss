@@ -24,11 +24,10 @@
     align-items: center;
   }
   .graficoMat{
-    width: 60px;
+    width: 5%;
     background-color: #1B50B6;
     height: 308px
  }
-
  .graficoGeo{
   width: 60px;
   background-color: #1B50B6;
@@ -84,12 +83,8 @@ text-align: left;
   line-height: 16px;
   letter-spacing: 0em;
   text-align: center;
-}
-.notaVerde{
-  color: green;
-}
-.notaVermelho{
-  color: red;
+
+
 }
 
 @media screen and (max-width:850px) {
@@ -111,13 +106,13 @@ text-align: left;
     padding:0px  20px;
    
      .graficoMat{
-       width: 35px;
+       width: 40px;
     }
     .graficoGeo{
-     width: 35px;
+     width: 40px;
    }
    .graficoHis{
-     width: 35px;
+     width: 40px;
    }
   }
    .divTexto{
