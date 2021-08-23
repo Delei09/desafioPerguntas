@@ -1,6 +1,8 @@
 import Rotas from './Rotas';
 import ContextPerguntas  from './contexto/PerguntasContext';
 import {BrowserRouter } from 'react-router-dom'
+import { useEffect } from 'react';
+import axios from 'axios';
 
 
 const perguntasMatematica= [  {
@@ -120,6 +122,10 @@ const perguntasGeografia= [  {
 
 function App() {
 
+useEffect( () => {
+    axios.get('http://localhost:3005/perguntas')
+      .then(resp => console.log(resp))
+}, [] )
   return (
     <div className="App">
       <BrowserRouter>

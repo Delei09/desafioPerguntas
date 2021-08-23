@@ -1,4 +1,4 @@
-import React , {useContext}from 'react';
+import React , {useContext, useState, useEffect }from 'react';
 import Header from '../components/Header'
 import ContainerMain  from '../components/ContainerMain';
 import ContextPerguntas from '../contexto/PerguntasContext';
@@ -8,12 +8,25 @@ import vetor from '../img/Vector.png'
 import '../styles/home.scss'
 import '../styles/gabarito.scss'
 import { Link } from 'react-router-dom';
+import { useRef } from 'react';
 
 const Gabarito = (props : any) => {
 
    
    const {perguntasMatematica, perguntasHistoria, perguntasGeografia}  = useContext(ContextPerguntas)
+  
    const { respGeo, respHis, respMat} = useContext(ContextResposta)
+
+   const labelErrado = useRef(null)
+
+
+   useEffect( () => {
+
+      const label = document.querySelectorAll('.label')
+      console.log(label)
+ }, [])
+
+
  
  return(
 <>
@@ -41,7 +54,7 @@ const Gabarito = (props : any) => {
       )   
       })}
    </ContainerMain>
-   <ContainerMain titulo = 'Conhecimentos em História'>
+   <ContainerMain titulo = 'Conhecimentos em Historia'>
 
 {perguntasHistoria.map((questao, i) => {
       return(

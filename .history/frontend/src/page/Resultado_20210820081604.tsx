@@ -1,12 +1,16 @@
-import React, { useState, useContext,useEffect} from 'react'
+import React, { useState } from 'react'
 import {Link } from 'react-router-dom'
 import ContainerMain from '../components/ContainerMain'
 import Header from '../components/Header'
-import  ContextResposta  from '../contexto/RespostaContext'
-import ContextPerguntas from '../contexto/PerguntasContext'
 import '../styles/resultado.scss'
+import  ContextResposta  from '../contexto/RespostaContext'
+import { useContext } from 'react'
+import ContextPerguntas from '../contexto/PerguntasContext'
+import { useEffect } from 'react'
+
 
 const Resultado = () => {
+
 
 const [resultadoMatematica, setResultadoMatematica] = useState<string[]>([])
 const [resultadoHistoria, setResultadoHistoria] = useState<string[]>([])
@@ -15,14 +19,17 @@ const { respGeo, respHis, respMat} = useContext(ContextResposta)
 const { perguntasGeografia, perguntasHistoria,perguntasMatematica } = useContext(ContextPerguntas)
 
 const respGraficoMat = {
+
     'background': '#9EBAEF' ,
     height: `${resultadoMatematica.length * 77}px`
 }
 const respGraficoHis = {
+    
     'background': '#9EBAEF' ,
     height: `${resultadoHistoria.length * 77}px`
 }
 const respGraficoGeo = {
+    
     'background': '#9EBAEF' ,
     height: `${resultadoGeografia.length * 77}px`
 }
@@ -81,7 +88,7 @@ const nota = ( (resultadoGeografia.length + resultadoHistoria.length + resultado
  return(
   <div className = 'divResultado'>
      <Header titulo = 'Teste de Conhecimentos' />
-     <h2 className = 'h2Resultado'>    {nota >= 70 ?   'Parabéns! Você tirou ' : 'Infelizmente Você tirou '}  <span className = {nota >= 70 ? 'notaVerde' : 'notaVermelho'}>{Math.round(nota)} .  </span>    </h2>
+     <h2 className = 'h2Resultado'>    {nota >= 70 ?   'Parabéns! Você tirou ' : 'Infelizmente Você tirou '}  <span className = {nota >= 70 ? 'notaVerde' : 'notaVermelho'}>{Math.round(nota)}   </span>    </h2>
      <ContainerMain titulo = 'O teste vale 100 pontos, e a nota necessária é 70'>
           <div className= 'divResultadoGrafico'>
 
@@ -99,8 +106,8 @@ const nota = ( (resultadoGeografia.length + resultadoHistoria.length + resultado
             </div>
           </div>
           <div className = 'divTexto'>
-              <h2>Matemática</h2>
-              <h2>História</h2>
+              <h2>Matematica</h2>
+              <h2>Historia</h2>
               <h2>Geografia</h2>
           </div>
 
