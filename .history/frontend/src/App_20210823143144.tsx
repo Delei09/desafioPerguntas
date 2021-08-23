@@ -69,7 +69,7 @@ const perguntasHistoria= [  {
   resposta: "O fogo",
   id: 'p3',
 },{
-  pergunta: 'Evento que marca o início da Idade Antiga?',
+  pergunta: 'Evento que marca o inicio da Idade Antiga?',
   options: [
     "A invenção da escrita",
     "A descoberta do fogo",

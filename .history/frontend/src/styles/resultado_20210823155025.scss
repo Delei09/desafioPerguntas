@@ -71,28 +71,20 @@ text-align: left;
 }
 .divTexto{
   display: flex;
-  align-items: flex-start;
+  align-self: center;
   justify-content: center;
   width: 500px;
   margin: 0 auto;
   padding: 0 40px;
-  gap: 90px;
+  gap: 60px;
+  border: solid 3px black;
   color: #000000;
   font-family: Ubuntu;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
-  h2{
-    margin: 0;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px;
-    letter-spacing: 0em;
-    text-align: left;
-
-  }
+  
 }
 .notaVerde{
   color: green;
